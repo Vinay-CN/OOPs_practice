@@ -3,12 +3,12 @@ package OOPS.Inheritance.IN;
 class Parent{
     String name="default";
     int age=10;
-    // void display(){
-    //     System.out.println("parent values"+name+" "+age);
-    // }
+    void display(){
+        System.out.println("parent values"+name+" "+age);
+    }
     public Parent()
     {
-        //System.out.println("i am parent");
+        System.out.println("i am parent");
     }
     public Parent(String name, int age)
     {
@@ -25,7 +25,7 @@ class Child extends Parent
 {
     int salary=1000;
     public Child(){
-        //System.out.println("i am child");
+        System.out.println("i am child");
     }
     public Child(String name,int age, int salary)
     {
@@ -48,9 +48,9 @@ class grandChild extends Child{
 public class Main {
     public static void main(String[] args)
     {
-       //Child child = new Child();
-       //child.display();
+       Child child = new Child();
+       child.display();
        grandChild a=new grandChild(10000);
-        
+        a.check();
     }
 }

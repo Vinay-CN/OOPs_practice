@@ -26,7 +26,7 @@ class Child extends Parent
    //it wil print parent default constructor first
     int money=income+500;
     String car="kia";
-    public Child(int a){
+    public Child(){
         System.out.println("child construct");
     }
     public void spend()
@@ -42,14 +42,14 @@ class Child extends Parent
 
     }
 }
-public class Topic {
+public class Topic{
     public static void main(String[] args) throws Exception {
-       Child child = new Child(7);
+        Child child = new Child();
         child.vrive();
         child.spend();
-       // System.out.println("see now my parent cant access my things");
-        // Parent parent = new Parent(4);
-        // parent.drive(); 
-        // parent.spend();
+        System.out.println("see now my parent cant access my things");
+        Parent parent = new Parent(4);
+        parent.drive(); 
+        parent.spend();
     }
 }
